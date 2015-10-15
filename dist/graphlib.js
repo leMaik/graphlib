@@ -74,7 +74,7 @@ module.exports = {
 };
 
 },{"./lib":18,"./lib/alg":9,"./lib/json":19}],3:[function(require,module,exports){
-var _ = require("../lodash");
+var _ = require("lodash");
 
 module.exports = components;
 
@@ -102,8 +102,8 @@ function components(g) {
   return cmpts;
 }
 
-},{"../lodash":20}],4:[function(require,module,exports){
-var _ = require("../lodash");
+},{"lodash":20}],4:[function(require,module,exports){
+var _ = require("lodash");
 
 module.exports = dfs;
 
@@ -143,9 +143,9 @@ function doDfs(g, v, postorder, visited, acc) {
   }
 }
 
-},{"../lodash":20}],5:[function(require,module,exports){
+},{"lodash":20}],5:[function(require,module,exports){
 var dijkstra = require("./dijkstra"),
-    _ = require("../lodash");
+    _ = require("lodash");
 
 module.exports = dijkstraAll;
 
@@ -155,8 +155,8 @@ function dijkstraAll(g, weightFunc, edgeFunc) {
   }, {});
 }
 
-},{"../lodash":20,"./dijkstra":6}],6:[function(require,module,exports){
-var _ = require("../lodash"),
+},{"lodash":20,"./dijkstra":6}],6:[function(require,module,exports){
+var _ = require("lodash"),
     PriorityQueue = require("../data/priority-queue");
 
 module.exports = dijkstra;
@@ -211,8 +211,8 @@ function runDijkstra(g, source, weightFn, edgeFn) {
   return results;
 }
 
-},{"../data/priority-queue":16,"../lodash":20}],7:[function(require,module,exports){
-var _ = require("../lodash"),
+},{"../data/priority-queue":16,"lodash":20}],7:[function(require,module,exports){
+var _ = require("lodash"),
     tarjan = require("./tarjan");
 
 module.exports = findCycles;
@@ -223,8 +223,8 @@ function findCycles(g) {
   });
 }
 
-},{"../lodash":20,"./tarjan":14}],8:[function(require,module,exports){
-var _ = require("../lodash");
+},{"lodash":20,"./tarjan":14}],8:[function(require,module,exports){
+var _ = require("lodash");
 
 module.exports = floydWarshall;
 
@@ -275,7 +275,7 @@ function runFloydWarshall(g, weightFn, edgeFn) {
   return results;
 }
 
-},{"../lodash":20}],9:[function(require,module,exports){
+},{"lodash":20}],9:[function(require,module,exports){
 module.exports = {
   components: require("./components"),
   dijkstra: require("./dijkstra"),
@@ -326,7 +326,7 @@ function preorder(g, vs) {
 }
 
 },{"./dfs":4}],13:[function(require,module,exports){
-var _ = require("../lodash"),
+var _ = require("lodash"),
     Graph = require("../graph"),
     PriorityQueue = require("../data/priority-queue");
 
@@ -379,8 +379,8 @@ function prim(g, weightFunc) {
   return result;
 }
 
-},{"../data/priority-queue":16,"../graph":17,"../lodash":20}],14:[function(require,module,exports){
-var _ = require("../lodash");
+},{"../data/priority-queue":16,"../graph":17,"lodash":20}],14:[function(require,module,exports){
+var _ = require("lodash");
 
 module.exports = tarjan;
 
@@ -428,8 +428,8 @@ function tarjan(g) {
   return results;
 }
 
-},{"../lodash":20}],15:[function(require,module,exports){
-var _ = require("../lodash");
+},{"lodash":20}],15:[function(require,module,exports){
+var _ = require("lodash");
 
 module.exports = topsort;
 topsort.CycleException = CycleException;
@@ -464,8 +464,8 @@ function topsort(g) {
 
 function CycleException() {}
 
-},{"../lodash":20}],16:[function(require,module,exports){
-var _ = require("../lodash");
+},{"lodash":20}],16:[function(require,module,exports){
+var _ = require("lodash");
 
 module.exports = PriorityQueue;
 
@@ -618,10 +618,10 @@ PriorityQueue.prototype._swap = function(i, j) {
   keyIndices[origArrI.key] = j;
 };
 
-},{"../lodash":20}],17:[function(require,module,exports){
+},{"lodash":20}],17:[function(require,module,exports){
 "use strict";
 
-var _ = require("./lodash");
+var _ = require("lodash");
 
 module.exports = Graph;
 
@@ -1090,7 +1090,7 @@ function edgeObjToId(isDirected, edgeObj) {
   return edgeArgsToId(isDirected, edgeObj.v, edgeObj.w, edgeObj.name);
 }
 
-},{"./lodash":20}],18:[function(require,module,exports){
+},{"lodash":20}],18:[function(require,module,exports){
 // Includes only the "core" of graphlib
 module.exports = {
   Graph: require("./graph"),
@@ -1098,7 +1098,7 @@ module.exports = {
 };
 
 },{"./graph":17,"./version":21}],19:[function(require,module,exports){
-var _ = require("./lodash"),
+var _ = require("lodash"),
     Graph = require("./graph");
 
 module.exports = {
@@ -1165,7 +1165,7 @@ function read(json) {
   return g;
 }
 
-},{"./graph":17,"./lodash":20}],20:[function(require,module,exports){
+},{"./graph":17,"lodash":20}],20:[function(require,module,exports){
 /* global window */
 
 var lodash;
